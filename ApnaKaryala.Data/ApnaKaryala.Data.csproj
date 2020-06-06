@@ -52,6 +52,7 @@
     <Compile Include="Configuration\CategoryConfiguration.cs" />
     <Compile Include="Configuration\GadgetConfiguration.cs" />
     <Compile Include="Configuration\LoginConfiguration.cs" />
+    <Compile Include="Configuration\Master\EmployeeConfiguration.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
