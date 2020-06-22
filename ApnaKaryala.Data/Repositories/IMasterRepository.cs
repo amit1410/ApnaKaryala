@@ -12,5 +12,6 @@ namespace ApnaKaryala.Data.Repositories
         List<StateDto> GetAllState(StateDto req);
         List<CityDto> GetAllCityByStateid(CityDto req);
         List<GenderDto> GetAllGender(GenderDto req);
+        List<HoliDayListDto> GetAllHoliDay(HoliDayListDto req);
     }
 }

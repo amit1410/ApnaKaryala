@@ -41,5 +41,13 @@ namespace ApnaKaryala.Service
             var result = _masterRepository.GetAllState(req);
             return result;
         }
+
+        public List<HoliDayListDto> GetAllHoliDay()
+        {
+            HoliDayListDto req = new HoliDayListDto();
+            req.SiteId = 1;
+            var result = _masterRepository.GetAllHoliDay(req);
+            return result;
+        }
     }
 }

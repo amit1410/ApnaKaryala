@@ -64,5 +64,22 @@ namespace ApnaKaryala.Data.Repositories
             }
             return lstState;
         }
+
+        public List<HoliDayListDto> GetAllHoliDay(HoliDayListDto req)
+        {
+            List<HoliDayListDto> lstHoliDay = new List<HoliDayListDto>();
+            try
+            {
+
+                var holidaylist = MasterContext.HoliDayList.Where(i => i.SiteId == req.SiteId).ToList();
+                lstHoliDay = Mapper.Convert<HoliDayListDto, HoliDayList>(holidaylist);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return lstHoliDay;
+        }
     }
 }

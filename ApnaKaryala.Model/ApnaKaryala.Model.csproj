@@ -47,6 +47,7 @@
     <Compile Include="Models\Gadget.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Master\Gender.cs" />
+    <Compile Include="Models\Master\HoliDayList.cs" />
     <Compile Include="Models\Master\SiteMaster.cs" />
     <Compile Include="Models\Master\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

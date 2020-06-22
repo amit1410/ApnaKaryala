@@ -21,6 +21,7 @@ namespace ApnaKaryala.Data
         public DbSet<State> State { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<Employee> Employee { get; set; }
+        public DbSet<HoliDayList> HoliDayList { get; set; }
 
 
         public virtual void Commit()
@@ -35,6 +36,7 @@ namespace ApnaKaryala.Data
             modelBuilder.Configurations.Add(new GenderConfiguration());
             modelBuilder.Configurations.Add(new StateConfiguration());
             modelBuilder.Configurations.Add(new CityConfiguration());
+            modelBuilder.Configurations.Add(new HoliDayListConfiguration());
 
         }
     }

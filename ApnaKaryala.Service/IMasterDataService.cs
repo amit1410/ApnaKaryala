@@ -12,5 +12,6 @@ namespace ApnaKaryala.Service
         List<StateDto> GetAllState();
         List<CityDto> GetAllCityByStateid(CityDto ct);
         List<GenderDto> GetAllGender();
+        List<HoliDayListDto> GetAllHoliDay();
     }
 }

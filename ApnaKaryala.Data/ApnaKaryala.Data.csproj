@@ -55,6 +55,7 @@
     <Compile Include="Configuration\Master\CityConfiguration.cs" />
     <Compile Include="Configuration\Master\EmployeeConfiguration.cs" />
     <Compile Include="Configuration\Master\GenderConfiguration.cs" />
+    <Compile Include="Configuration\Master\HoliDayListConfiguration.cs" />
     <Compile Include="Configuration\Master\SiteMasterConfiguration.cs" />
     <Compile Include="Configuration\Master\StateConfiguration.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
