@@ -42,8 +42,12 @@
   <ItemGroup>
     <Compile Include="AccountService.cs" />
     <Compile Include="CategoryService.cs" />
+    <Compile Include="EmployeeService.cs" />
     <Compile Include="GadgetService.cs" />
     <Compile Include="IAccountService.cs" />
+    <Compile Include="IEmployeeService.cs" />
+    <Compile Include="IMasterDataService.cs" />
+    <Compile Include="MasterDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

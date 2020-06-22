@@ -17,10 +17,9 @@ namespace ApnaKaryala.DTO.Master
         public string Address3 { get; set; }
         public int? CityId { get; set; }
         public int? StateId { get; set; }
-        public int? CountryId { get; set; }
-        public decimal? Pincode { get; set; }
-        public decimal Phone { get; set; }
-        public decimal? Mobile { get; set; }
+        public int? Pincode { get; set; }
+        public string Phone { get; set; }
+        public string Mobile { get; set; }
         public String FatherName { get; set; }
         public String MotherName { get; set; }
         public int? GenderId { get; set; }
@@ -33,6 +32,6 @@ namespace ApnaKaryala.DTO.Master
         public int? SiteId { get; set; }
         public string PersonalMailId { get; set; }
         public string Email { get; set; }
-        public bool? ISSupervisor { get; set; }
+        public bool ISSupervisor { get; set; }
     }
 }

@@ -42,7 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginDto.cs" />
+    <Compile Include="Master\CityDto.cs" />
     <Compile Include="Master\EmployeeDto.cs" />
+    <Compile Include="Master\GenderDto.cs" />
+    <Compile Include="Master\SiteMasterDto.cs" />
+    <Compile Include="Master\StateDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

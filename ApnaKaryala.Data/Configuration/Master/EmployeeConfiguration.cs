@@ -20,7 +20,7 @@ namespace ApnaKaryala.Data.Configuration.Master
             Property(g => g.Address2);
             Property(g => g.Address3);
             Property(g => g.CityId);
-            Property(g => g.CountryId);
+            Property(g => g.StateId);
             Property(g => g.DateofResign);
             Property(g => g.DOB);
             Property(g => g.DOJ);

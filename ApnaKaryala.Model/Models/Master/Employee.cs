@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,8 @@ namespace ApnaKaryala.Model.Models.Employee
 {
     public class Employee
     {
-        public int? EmployeeId { get; set; }
+        [Key]
+        public int EmployeeId { get; set; }
         public string First_Name { get; set; }  
         public string Middle_Name { get; set; }  
         public string Last_Name { get; set; }     
@@ -17,10 +19,9 @@ namespace ApnaKaryala.Model.Models.Employee
         public string Address3 { get; set; }     
         public int? CityId { get; set; }       
         public int? StateId { get; set; }         
-        public int? CountryId { get; set; }      
-        public decimal? Pincode { get; set; }  
-        public decimal Phone { get; set; }      
-        public decimal? Mobile { get; set; }    
+        public int Pincode { get; set; }  
+        public string Phone { get; set; }      
+        public string Mobile { get; set; }    
         public String FatherName { get; set; }     
         public String MotherName { get; set; }     
         public int? GenderId { get; set; }      

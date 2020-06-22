@@ -1,5 +1,8 @@
 ﻿using ApnaKaryala.Data.Configuration;
+using ApnaKaryala.Data.Configuration.Master;
 using ApnaKaryala.Model;
+using ApnaKaryala.Model.Models.Employee;
+using ApnaKaryala.Model.Models.Master;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,7 +17,11 @@ namespace ApnaKaryala.Data
         public MasterEntities() : base("MasterEntities") { }
 
         public DbSet<Login> Login { get; set; }
-       
+        public DbSet<Gender> Gender { get; set; }
+        public DbSet<State> State { get; set; }
+        public DbSet<City> City { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+
 
         public virtual void Commit()
         {
@@ -24,7 +31,11 @@ namespace ApnaKaryala.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new LoginConfiguration());
-           
+            modelBuilder.Configurations.Add(new EmployeeConfiguration());
+            modelBuilder.Configurations.Add(new GenderConfiguration());
+            modelBuilder.Configurations.Add(new StateConfiguration());
+            modelBuilder.Configurations.Add(new CityConfiguration());
+
         }
     }
 }

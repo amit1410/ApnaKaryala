@@ -41,7 +41,8 @@ namespace ApnaKaryala.Data.Infrastructure
         #region Implementation
         public virtual void Add(T entity)
         {
-            dbSet.Add(entity);
+            dbSet.Attach(entity);
+            dataContext.Entry(entity).State = EntityState.Added;
         }
 
         public virtual void Update(T entity)
