@@ -1,0 +1,93 @@
+﻿@model IEnumerable<ApnaKaryala.DTO.Master.HoliDayListDto>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Page Content -->
+<div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">HoliDay List</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">HoliDay List</li>
+                </ul>
+            </div>
+            @*<div class="col-auto float-right ml-auto">
+                <a class="btn add-btn" id="addemp" href="@Url.Action("AddNewEmployee")"><i class="fa fa-plus"></i> Add Employee</a>
+            </div>*@
+        </div>
+    </div>
+    <!-- /Page Header -->
+   
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table mb-0 datatable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>HoliDay</th>
+                            <th>Date</th>
+                            <th>Day</th>
+                            <th>NO. Of Day</th>
+                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ int count = 1;}
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.HoliDayName</td>
+                                <td>@Convert.ToDateTime(item.HoliDayDate).ToString("dd/MM/yyyy")</td>
+                                <td>@item.HoliDay_Day</td>
+                                <td>@item.NoOfDay</td>
+                              
+                            </tr>
+                            count++;
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->
+
+<!-- /Delete Leave Modal -->
+<script src="~/assets/js/jquery-3.2.1.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="~/assets/js/popper.min.js"></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+
+<!-- Slimscroll JS -->
+<script src="~/assets/js/jquery.slimscroll.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="~/assets/js/select2.min.js"></script>
+
+<!-- Datetimepicker JS -->
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       if('@ViewBag.message' == "Added") {
+          toastr.success('Added');
+       }
+       else{ }
+    });
+</script>
+<style>
+</style>
