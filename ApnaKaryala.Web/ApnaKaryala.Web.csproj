@@ -241,6 +241,7 @@
     <Content Include="Views\Employee\_AddEmployee.cshtml" />
     <Content Include="Views\Employee\AddNewEmployee.cshtml" />
     <Content Include="Views\Master\HoliDayList.cshtml" />
+    <Content Include="Views\Leave\_AddNewLeave.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

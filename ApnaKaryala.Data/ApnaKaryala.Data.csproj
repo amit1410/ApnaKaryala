@@ -51,6 +51,10 @@
   <ItemGroup>
     <Compile Include="Configuration\CategoryConfiguration.cs" />
     <Compile Include="Configuration\GadgetConfiguration.cs" />
+    <Compile Include="Configuration\LeaveManagement\LeaveDetailsConfiguration.cs" />
+    <Compile Include="Configuration\LeaveManagement\LeaveStatusCategoryConfiguration.cs" />
+    <Compile Include="Configuration\LeaveManagement\LeaveStatusConfiguration.cs" />
+    <Compile Include="Configuration\LeaveManagement\LeaveTypeConfiguration.cs" />
     <Compile Include="Configuration\LoginConfiguration.cs" />
     <Compile Include="Configuration\Master\CityConfiguration.cs" />
     <Compile Include="Configuration\Master\EmployeeConfiguration.cs" />
@@ -75,6 +79,8 @@
     <Compile Include="Repositories\IAccountRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
     <Compile Include="Repositories\IMasterRepository.cs" />
+    <Compile Include="Repositories\LeaveManagement\ILeaveRepository.cs" />
+    <Compile Include="Repositories\LeaveManagement\LeaveRepository.cs" />
     <Compile Include="Repositories\MasterDataRepository.cs" />
     <Compile Include="StoreEntities.cs" />
     <Compile Include="StoreSeedData.cs" />
@@ -93,6 +99,7 @@
       <Name>ApnaKaryala.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -47,6 +47,8 @@
     <Compile Include="IAccountService.cs" />
     <Compile Include="IEmployeeService.cs" />
     <Compile Include="IMasterDataService.cs" />
+    <Compile Include="LeaveManagement\ILeaveService.cs" />
+    <Compile Include="LeaveManagement\LeaveService.cs" />
     <Compile Include="MasterDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,6 +66,7 @@
       <Name>ApnaKaryala.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

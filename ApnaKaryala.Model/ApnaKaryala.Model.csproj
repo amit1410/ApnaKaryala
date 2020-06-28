@@ -42,6 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\LeaveManagement\LeaveDetails.cs" />
+    <Compile Include="Models\LeaveManagement\LeaveStatus.cs" />
+    <Compile Include="Models\LeaveManagement\LeaveStatusCategory.cs" />
+    <Compile Include="Models\LeaveManagement\LeaveType.cs" />
     <Compile Include="Models\Master\City.cs" />
     <Compile Include="Models\Master\Employee.cs" />
     <Compile Include="Models\Gadget.cs" />

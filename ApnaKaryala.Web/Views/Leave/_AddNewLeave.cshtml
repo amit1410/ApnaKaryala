@@ -1,0 +1,39 @@
+﻿@model ApnaKaryala.DTO.LeaveManagement.LeaveDetailsDto
+
+@using (Html.BeginForm("Submit", "Leave", FormMethod.Post))
+{
+
+    <div class="form-group">
+        <label>Leave Type <span class="text-danger">*</span></label>
+        @Html.DropDownListFor(model => model.LeaveTypeId, new SelectList(ViewBag.leavetype, "LeaveTypeId", "LeaveTypeName"), "Select Leave Type", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>From <span class="text-danger">*</span></label>
+        <div class="cal-icon">
+            @*<input class="form-control datetimepicker" id="fromdate" type="text" value="@Model.DateFrom">*@
+            @Html.TextBoxFor(m => m.DateFrom, "{0:MM/dd/yyyy}", new { maxlength = "12", @class = "form-control datetimepicker" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label>To <span class="text-danger">*</span></label>
+        <div class="cal-icon">
+            @*<input class="form-control datetimepicker" id="todate" type="text" value="@Model.DateTo">*@
+            @Html.TextBoxFor(m => m.DateTo, "{0:MM/dd/yyyy}", new { maxlength = "12", @class = "form-control datetimepicker" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Number of days <span class="text-danger">*</span></label>
+        @Html.TextBoxFor(x => x.LeaveCount, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Remaining Leaves <span class="text-danger">*</span></label>
+        @Html.TextBoxFor(x => x.RemainingLeave, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Leave Reason <span class="text-danger">*</span></label>
+        @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    </div>
+    <div class="submit-section">
+        <button class="btn btn-primary submit-btn">Submit</button>
+    </div>
+}

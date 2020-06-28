@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LeaveManagement\LeaveDetailsDto.cs" />
+    <Compile Include="LeaveManagement\LeaveStatusCategoryDto.cs" />
+    <Compile Include="LeaveManagement\LeaveStatusDto.cs" />
+    <Compile Include="LeaveManagement\LeaveTypeDto.cs" />
     <Compile Include="LoginDto.cs" />
     <Compile Include="Master\CityDto.cs" />
     <Compile Include="Master\EmployeeDto.cs" />
@@ -50,5 +54,6 @@
     <Compile Include="Master\StateDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

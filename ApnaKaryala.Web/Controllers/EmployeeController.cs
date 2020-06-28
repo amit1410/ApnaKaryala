@@ -63,7 +63,7 @@ namespace ApnaKaryala.Web.Controllers
         public ActionResult Submit(EmployeeDto empdto, string save)
         {
             var saveemp = _employeeService.saveemoloyeedata(empdto);
-            return RedirectToAction("Index1", new { message = "Added" });
+            return RedirectToAction("Index", new { message = "Added" });
         }
 
         public JsonResult City_Bind(string state_id)
