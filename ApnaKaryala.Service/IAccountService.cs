@@ -11,5 +11,8 @@ namespace ApnaKaryala.Service
     public interface IAccountService
     {
         bool loginService(LoginDto Obj);
+        bool loginService1(LoginDto Obj,string a);
+        bool loginService2(LoginDto Obj,int a);
+        bool loginService3(LoginDto Obj,bool t);
     }
 }

@@ -26,5 +26,20 @@ namespace ApnaKaryala.Service
             bool result = _accountRepository.loginService(Obj);
             return result;
         }
+        public bool loginService1(LoginDto Obj,string a)
+        {
+            bool result = _accountRepository.loginService(Obj);
+            return result;
+        }
+        public bool loginService2(LoginDto Obj,int a)
+        {
+            bool result = _accountRepository.loginService(Obj);
+            return result;
+        }
+        public bool loginService3(LoginDto Obj,bool t)
+        {
+            bool result = _accountRepository.loginService(Obj);
+            return result;
+        }
     }
 }

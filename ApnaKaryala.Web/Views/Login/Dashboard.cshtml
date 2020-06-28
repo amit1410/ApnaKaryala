@@ -1,8 +1,142 @@
-﻿
+﻿@model IEnumerable<ApnaKaryala.DTO.Master.EmployeeDto>
 @{
-    ViewBag.Title = "Dashboard";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Dashboard</h2>
 
+<!-- Page Content -->
+<div class="content container-fluid">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">DashBoard</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    @*<li class="breadcrumb-item active">Employee List</li>*@
+                </ul>
+            </div>
+            @*<div class="col-auto float-right ml-auto">
+                <a class="btn add-btn" id="addemp" href="@Url.Action("AddNewEmployee")"><i class="fa fa-plus"></i> Add Employee</a>
+            </div>*@
+        </div>
+    </div>
+    <!-- /Page Header -->
+    <!-- Leave Statistics -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="stats-info">
+                <h6>Total Employee</h6>
+                <h4>12</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-info">
+                <h6>On Leave</h6>
+                <h4>3</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-info">
+                <h6>Total Department</h6>
+                <h4>4</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-info">
+                <h6>Total Roles</h6>
+                <h4>5</h4>
+            </div>
+        </div>
+    </div>
+    <!-- /Leave Statistics -->
+
+    
+</div>
+<!-- /Page Content -->
+<!-- Add Leave Modal -->
+<div id="add_leave" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Leave</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="myModalContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Add Leave Modal -->
+<!-- Edit Leave Modal -->
+<div id="edit_leave" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Leave</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Edit Leave Modal -->
+<!-- Delete Leave Modal -->
+<div class="modal custom-modal fade" id="delete_approve" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="form-header">
+                    <h3>Delete Leave</h3>
+                    <p>Are you sure want to Cancel this leave?</p>
+                </div>
+                <div class="modal-btn delete-action">
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Delete Leave Modal -->
+<script src="~/assets/js/jquery-3.2.1.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="~/assets/js/popper.min.js"></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+
+<!-- Slimscroll JS -->
+<script src="~/assets/js/jquery.slimscroll.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="~/assets/js/select2.min.js"></script>
+
+<!-- Datetimepicker JS -->
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       if('@ViewBag.message' == "Added") {
+          toastr.success('Added');
+       }
+       else{ }
+    });
+</script>
+<style>
+</style>
