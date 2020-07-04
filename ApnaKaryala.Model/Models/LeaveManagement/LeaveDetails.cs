@@ -13,8 +13,7 @@ namespace ApnaKaryala.Model.Models.LeaveManagement
         public int LeaveId { get; set; }  //    
         public int? EmpID { get; set; }  //  
         public int? LeaveTypeId { get; set; }  //  
-        public DateTime? DateFrom { get; set; }  // 
-        public DateTime? DateTo { get; set; }  //      
+        public DateTime? LeaveDate { get; set; }  // 
         public int? SiteID { get; set; }  //        
         public int? ShiftId { get; set; }  //         
         public int? LeaveStatusID { get; set; }  //   

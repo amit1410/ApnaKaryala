@@ -37,12 +37,26 @@ namespace ApnaKaryala.Data.Repositories.LeaveManagement
             try
             {
                 var leaveentry = Mapper.Convert<LeaveDetails, LeaveDetailsDto>(obj);
-                MasterContext.Entry(leaveentry).State = EntityState.Added;
-                MasterContext.LeaveDetails.Add(leaveentry);
-                MasterContext.SaveChanges();
-
+                if(obj.LeaveCount>1)
+                {
+                    for(int i=0;i< obj.LeaveCount;i++)
+                    {
+                        leaveentry.LeaveDate = Convert.ToDateTime(obj.DateFrom).AddDays(i);
+                        leaveentry.LeaveCount = 1;
+                        leaveentry.LeaveTypeId = obj.LeaveTypeId;
+                        MasterContext.Entry(leaveentry).State = EntityState.Added;
+                        MasterContext.LeaveDetails.Add(leaveentry);
+                        MasterContext.SaveChanges();
+                    }
+                }
+                else
+                {
+                    MasterContext.Entry(leaveentry).State = EntityState.Added;
+                    MasterContext.LeaveDetails.Add(leaveentry);
+                    MasterContext.SaveChanges();
+                }
+              
                 result = true;
-
             }
             catch (Exception ex)
             {

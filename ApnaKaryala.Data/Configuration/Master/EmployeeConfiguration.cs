@@ -41,7 +41,10 @@ namespace ApnaKaryala.Data.Configuration.Master
             Property(g => g.Pincode);
             Property(g => g.SiteId);
             Property(g => g.StateId);
-           
+            Property(g => g.HighestQualification);
+            Property(g => g.AdhaarNo);
+            Property(g => g.PANCardNo);
+
 
         }
     }

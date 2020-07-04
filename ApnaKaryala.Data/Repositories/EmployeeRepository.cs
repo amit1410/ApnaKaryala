@@ -21,6 +21,7 @@ namespace ApnaKaryala.Data.Repositories
             try
             {
                 var emp = Mapper.Convert<Employee, EmployeeDto>(obj);
+                emp.IsActive = true;
                   MasterContext.Entry(emp).State = EntityState.Added;
                 MasterContext.Employee.Add(emp);
                 MasterContext.SaveChanges();

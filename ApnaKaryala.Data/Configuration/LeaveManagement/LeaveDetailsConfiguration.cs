@@ -15,8 +15,7 @@ namespace ApnaKaryala.Data.Configuration.LeaveManagement
             ToTable("LeaveDetails");
             Property(g => g.LeaveId).IsRequired();
 
-            Property(g => g.DateFrom);
-            Property(g => g.DateTo);
+            Property(g => g.LeaveDate);
             Property(g => g.EmpID);
             Property(g => g.LeaveCount);
             Property(g => g.LeaveTypeId);

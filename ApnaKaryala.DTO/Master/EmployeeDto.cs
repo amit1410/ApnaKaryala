@@ -27,11 +27,14 @@ namespace ApnaKaryala.DTO.Master
         public DateTime? DOJ { get; set; }
         public DateTime? DateofResign { get; set; }
         public DateTime? DOL { get; set; }
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
         public string EmployeeCode { get; set; }
         public int? SiteId { get; set; }
         public string PersonalMailId { get; set; }
         public string Email { get; set; }
+        public string AdhaarNo { get; set; }
+        public string PANCardNo { get; set; }
+        public string HighestQualification { get; set; }
         public bool ISSupervisor { get; set; }
     }
 }

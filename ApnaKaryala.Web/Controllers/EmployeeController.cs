@@ -62,6 +62,7 @@ namespace ApnaKaryala.Web.Controllers
 
         public ActionResult Submit(EmployeeDto empdto, string save)
         {
+            empdto.SiteId = 1;
             var saveemp = _employeeService.saveemoloyeedata(empdto);
             return RedirectToAction("Index", new { message = "Added" });
         }
