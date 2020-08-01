@@ -24,6 +24,12 @@ namespace ApnaKaryala.Web.Controllers
             {
                 ViewBag.leavetype = leavetype;
             }
+            req.EmpID = 1;
+            req.SiteID = 1;
+            req.LeaveStatusID = 3;//need to get from database as per site
+            req.LeaveStatusCatagoryId = 3;
+            var saveemp = _leaveService.GetLeaveByEmployeeId(req);
+            req.leavedetails = saveemp;
             return View(req);
         }
 
@@ -36,6 +42,23 @@ namespace ApnaKaryala.Web.Controllers
             var saveemp = _leaveService.saveemoloyeedata(leavedetailsdto);
             return RedirectToAction("Index", new { message = "Added" });
         }
-     
+
+        public ActionResult ApplyLeave()
+        {
+            LeaveDetailsDto req = new LeaveDetailsDto();
+            var leavetype = _leaveService.GetAllLeaveType();
+            if (leavetype != null)
+            {
+                ViewBag.leavetype = leavetype;
+            }
+            return View(req);
+        }
+
+        public JsonResult GetRemaningLeave(int leavetypeid) // its a GET, not a POST
+        {
+            int leave = 2;
+            return Json(leave, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

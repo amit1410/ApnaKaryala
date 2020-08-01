@@ -11,5 +11,6 @@ namespace ApnaKaryala.Data.Repositories.LeaveManagement
     {
         List<LeaveTypeDto> GetAllLeaveType(LeaveTypeDto req);
         bool savenewleavedata(LeaveDetailsDto obj);
+        List<LeaveDetailsDto> GetLeaveByEmployeeId(LeaveDetailsDto req);
     }
 }

@@ -21,5 +21,6 @@ namespace ApnaKaryala.Model.Models.LeaveManagement
         public int? LeaveCount { get; set; }  //        
         public int? SupervisorID { get; set; }  //  
         public string Description { get; set; }  //  
+        public int ApplicationNo { get; set; }
     }
 }

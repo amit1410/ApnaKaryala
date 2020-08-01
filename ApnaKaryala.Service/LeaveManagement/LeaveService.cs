@@ -33,5 +33,11 @@ namespace ApnaKaryala.Service.LeaveManagement
             bool result = false;
             return result;
         }
+
+        public List<LeaveDetailsDto> GetLeaveByEmployeeId(LeaveDetailsDto leavedto)
+        {
+            var save = _leaveRepository.GetLeaveByEmployeeId(leavedto);
+            return save;
+        }
     }
 }

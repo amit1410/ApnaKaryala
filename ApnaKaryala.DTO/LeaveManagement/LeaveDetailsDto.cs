@@ -9,6 +9,10 @@ namespace ApnaKaryala.DTO.LeaveManagement
 {
     public class LeaveDetailsDto
     {
+        public LeaveDetailsDto()
+        {
+            leavedetails = new List<LeaveDetailsDto>();
+        }
         public int LeaveId { get; set; }  //    
         public int? EmpID { get; set; }  //  
         public int? LeaveTypeId { get; set; }  //  
@@ -27,5 +31,10 @@ namespace ApnaKaryala.DTO.LeaveManagement
         public string Description { get; set; }  //  
         public string RemainingLeave { get; set; }  //  
         public DateTime? LeaveDate { get; set; }  // 
+        public int ApplicationNo { get; set; }
+        public string Leavetypename { get; set; }  // 
+        public string leavestatusname { get; set; }  // 
+        public string EmployeeName { get; set; }  // 
+        public List<LeaveDetailsDto> leavedetails { get; set; }  // 
     }
 }

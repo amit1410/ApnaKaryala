@@ -26,6 +26,7 @@ namespace ApnaKaryala.Data.Configuration.LeaveManagement
             Property(g => g.LeaveStatusCatagoryId);
             Property(g => g.SupervisorID);
             Property(g => g.Description);
+            Property(g => g.ApplicationNo);
 
         }
     }

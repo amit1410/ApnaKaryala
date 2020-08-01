@@ -5,7 +5,7 @@
 
     <div class="form-group">
         <label>Leave Type <span class="text-danger">*</span></label>
-        @Html.DropDownListFor(model => model.LeaveTypeId, new SelectList(ViewBag.leavetype, "LeaveTypeId", "LeaveTypeName"), "Select Leave Type", new { @class = "form-control" })
+        @Html.DropDownListFor(model => model.LeaveTypeId, new SelectList(ViewBag.leavetype, "LeaveTypeId", "LeaveTypeName"), "Select Leave Type", new { @class = "form-control" ,@onchange="getEmployeeDetails()"})
     </div>
     <div class="form-group">
         <label>From <span class="text-danger">*</span></label>
@@ -38,3 +38,24 @@
     </div>
 }
 
+<script>
+    var url = '@Url.Action("GetRemaningLeave", "Leave")'; // Don't hard code your url's!
+
+    function getEmployeeDetails()
+    {
+        
+    var id  = $('#LeaveTypeId').val();
+ $.ajax({
+    type: 'GET',
+    url: '/Leave/GetRemaningLeave',
+    data: { leavetypeid: id },
+    cache: false,
+     success: function (result) {
+        $("#RemainingLeave").val(result)
+
+    }
+});
+    }
+   
+
+</script>
